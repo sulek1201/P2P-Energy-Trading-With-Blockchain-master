@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+  .pb-2.mt-2.mb-4.border-bottom
+    h3 Awaiting Approvals
+
+  form(method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='name') Sender Name
+      .col-md-7
+        input.form-control(type='text', name='senderName', id='senderName', value=awaitingTransactions.senderName)
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='name') Reciever Name
+      .col-md-7
+        input.form-control(type='text', name='recieverName', id='recieverName', value=awaitingTransactions.recieverName)
+    .form-group.row
+      label.col-md-3.col-form-label.font-weight-bold.text-right(for='quantity') Quantity
+      .col-md-7
+        input.form-control(type='number', name='quantity', id='quantity', value=awaitingTransactions.quantity)  
+    .form-group
+      .offset-sm-3.col-md-7.pl-2
+        button.btn.btn.btn-success(type='submit')
+          i.fas.fa-pencil-alt.fa-sm
+          | Approve Trade
