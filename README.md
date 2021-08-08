@@ -4,9 +4,6 @@ Industries cooperate with intermediary institutions as third-party businesses wh
 Getting Started
 The easiest way to get started is to clone the repository:
 
-# Get the latest snapshot
-git clone https://github.com/bugramertayar/P2P-Energy-Trading-With-Blockchain.git
-
 # Change directory
 cd myproject
 
